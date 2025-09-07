@@ -1,1 +1,196 @@
-<h1>Hola, soy Guillem ??</h1> 
+<!-- PARA SUBIR A GITHUB
+https://guillem0707.github.io/portfolio/
+
+git add index.html
+git commit -m "feat: add index.html landing page"
+git push -->
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio – Guillem</title>
+    <style>
+        :root {
+            --bg: #0b0b0c;
+            --card: #111215;
+            --fg: #f5f6fa;
+            --muted: #a7acb4;
+            --acc: #7aa2ff;
+            --ring: #2b2f36;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.6 "Inter", ui-sans-serif, system-ui, Arial;
+            color: var(--fg);
+            background: var(--bg);
+        }
+
+        a {
+            color: var(--acc);
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: .8;
+        }
+
+        header,
+        section {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--acc);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #14161c 0%, #0b0b0c 100%);
+        }
+
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--ring);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--muted);
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--ring);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        @media(min-width: 800px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .stack span {
+            display: inline-block;
+            margin: 6px;
+            padding: 8px 14px;
+            border: 1px solid var(--ring);
+            border-radius: 999px;
+            font-size: 14px;
+            background: #0f1216;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--muted);
+            border-top: 1px solid var(--ring);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="https://github.com/Guillem0707.png" alt="Guillem">
+        <h1>¡Hola! Soy Guillem 👋</h1>
+        <p>Full-stack en formación · React (TS) + NestJS · Apasionado por la salud mental & el diseño estilo
+            Apple/Linear.</p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section>
+        <div class="container">
+            <h2>🚀 Proyectos</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>MentalHealth</h3>
+                    <p>Monorepo con agenda, hábitos y estado de ánimo.
+                        <a href="https://github.com/Guillem0707/mentalhealth">Ver código →</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Portfolio</h3>
+                    <p>Este sitio estático desplegado con GitHub Pages.
+                        <a href="https://Guillem0707.github.io/portfolio">Ver demo →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STACK -->
+    <section>
+        <div class="container">
+            <h2>🧰 Stack</h2>
+            <div class="stack">
+                <span>React</span><span>TypeScript</span><span>Vite</span>
+                <span>Tailwind</span><span>Zustand</span><span>NestJS</span>
+                <span>Prisma</span><span>PostgreSQL</span><span>pnpm</span>
+                <span>GitHub Actions</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section>
+        <div class="container">
+            <h2>📬 Contacto</h2>
+            <div class="card">
+                <p>Email: <a href="mailto:guillemsansa@gmail.com">guillemsansa@gmail.com</a></p>
+                <p>LinkedIn: pronto</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Guillem — Construido con ❤️ y café
+    </footer>
+</body>
+
+</html>
