@@ -6,73 +6,310 @@ git commit -m "feat: add index.html landing page"
 git push -->
 
 <!doctype html>
-<html lang="es">
+<html lang="es" dir="ltr">
 
 <head>
+    <!-- ===== Meta básicas ===== -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio – Guillem</title>
+    <title>Guillem Sansalvador — Portfolio</title>
+    <meta name="description"
+        content="Guillem Sansalvador, programador Full Stack en formación. Proyectos web con TypeScript, React y NestJS. Contacto y enlaces." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="color-scheme" content="light dark" />
 
+    <!-- ===== Canonical (GitHub Pages) ===== -->
+    <link rel="canonical" href="https://guillem0707.github.io/portfolio/" />
+
+    <!-- ===== Open Graph / Twitter Cards ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Guillem Sansalvador — Portfolio" />
+    <meta property="og:description" content="Proyectos, experiencia e información de contacto." />
+    <meta property="og:url" content="https://guillem0707.github.io/portfolio/" />
+    <meta property="og:image" content="https://github.com/Guillem0707.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Guillem Sansalvador — Portfolio" />
+    <meta name="twitter:description" content="Proyectos, experiencia e información de contacto." />
+    <meta name="twitter:image" content="https://github.com/Guillem0707.png" />
+
+    <!-- ===== Favicons (rutas relativas para project page) ===== -->
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#0f172a" />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
+    <!-- Saltar a contenido (accesibilidad) -->
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <!-- HERO -->
-    <section class="hero">
-        <img src="https://github.com/Guillem0707.png" alt="Guillem">
-        <h1>¡Hola! Soy Guillem 👋</h1>
-        <p>Full-stack en formación · React (TS) + NestJS · Apasionado por la salud mental & el diseño estilo
-            Apple/Linear.</p>
-    </section>
+    <!-- ===== Header ===== -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <h1 class="header__container--title">Bienvenidos, soy GUILLEM</h1>
+            <p class="header__container--description">Programador Full Stack en formación.</p>
+        </div>
 
-    <!-- PROYECTOS -->
-    <section>
-        <div class="container">
-            <h2>🚀 Proyectos</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>MentalHealth</h3>
-                    <p>Monorepo con agenda, hábitos y estado de ánimo.
-                        <a href="https://github.com/Guillem0707/mentalhealth">Ver código →</a>
+        <figure class="header__avatar">
+            <img src="https://github.com/Guillem0707.png" alt="Foto de perfil de Guillem Sansalvador" width="200"
+                height="200" loading="lazy" decoding="async" />
+            <figcaption class="sr-only">Guillem Sansalvador</figcaption>
+        </figure>
+
+        <nav class="header__nav" aria-label="Navegación principal">
+            <ul class="header__nav-list">
+                <li><a href="#sobre-mi" class="header__nav-link" aria-current="page">Sobre mí</a></li>
+                <li><a href="#proyectos" class="header__nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="header__nav-link">Contacto</a></li>
+                <li><a href="https://github.com/Guillem0707" class="header__nav-link" rel="me noopener"
+                        target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Main ===== -->
+    <main id="contenido" class="main">
+        <!-- Sobre mí -->
+        <section class="main__info" id="sobre-mi" aria-labelledby="sobre-mi-title">
+            <h2 id="sobre-mi-title" class="sobre-mi-title">Sobre mí</h2>
+            <p>
+                Me estoy formando en programación <strong>full-stack</strong> de manera autodidacta.
+                Me interesa crear aplicaciones y servicios que aporten valor a personas que quieran
+                mejorar su salud mental y emocional, con una experiencia visual e interactiva cuidada.
+            </p>
+
+            <dl class="about-list">
+                <dt>Ubicación</dt>
+                <dd>España (remoto/Europa)</dd>
+                <dt>Stack actual</dt>
+                <dd>TypeScript, React, NestJS</dd>
+                <dt>Intereses</dt>
+                <dd>Salud mental, UX, accesibilidad</dd>
+            </dl>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="main__proyectos" id="proyectos" aria-labelledby="proyectos-title">
+            <h2 class="main__proyectos--title" id="proyectos-title">Mis proyectos</h2>
+
+            <article class="project" aria-labelledby="p1-title">
+                <header>
+                    <h3 id="p1-title">Proyecto 1</h3>
+                    <p class="project__meta">
+                        <time datetime="2025-08">Ago 2025</time> · TypeScript, React
                     </p>
-                </div>
-                <div class="card">
-                    <h3>Portfolio</h3>
-                    <p>Este sitio estático desplegado con GitHub Pages.
-                        <a href="https://Guillem0707.github.io/portfolio">Ver demo →</a>
+                </header>
+                <p>Breve descripción del Proyecto 1: objetivo, rol y resultado.</p>
+                <ul class="project__links">
+                    <li><a href="#" target="_blank" rel="noopener">Demo</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Código</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </article>
+
+            <article class="project" aria-labelledby="p2-title">
+                <header>
+                    <h3 id="p2-title">Proyecto 2</h3>
+                    <p class="project__meta">
+                        <time datetime="2025-07">Jul 2025</time> · NestJS, REST
                     </p>
+                </header>
+                <p>Breve descripción del Proyecto 2.</p>
+                <ul class="project__links">
+                    <li><a href="#" target="_blank" rel="noopener">Demo</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Código</a></li>
+                </ul>
+            </article>
+
+            <article class="project" aria-labelledby="p3-title">
+                <header>
+                    <h3 id="p3-title">Proyecto 3</h3>
+                    <p class="project__meta">
+                        <time datetime="2025-06">Jun 2025</time> · HTML, CSS
+                    </p>
+                </header>
+                <p>Breve descripción del Proyecto 3.</p>
+                <ul class="project__links">
+                    <li><a href="#" target="_blank" rel="noopener">Demo</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Código</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact" id="contacto" aria-labelledby="contacto-title">
+            <h2 id="contacto-title">Contacto</h2>
+
+            <!-- Si usas backend propio (NestJS), cambia action="/api/contact".
+           Si usas Formspree/Netlify, pega su URL en action. -->
+            <form class="contact__form" action="#" method="post" novalidate>
+                <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required />
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- STACK -->
-    <section>
-        <div class="container">
-            <h2>🧰 Stack</h2>
-            <div class="stack">
-                <span>React</span><span>TypeScript</span><span>Vite</span>
-                <span>Tailwind</span><span>Zustand</span><span>NestJS</span>
-                <span>Prisma</span><span>PostgreSQL</span><span>pnpm</span>
-                <span>GitHub Actions</span>
-            </div>
-        </div>
-    </section>
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" placeholder="example@gmail.com" autocomplete="email"
+                        required />
+                </div>
 
-    <!-- CONTACTO -->
-    <section>
-        <div class="container">
-            <h2>📬 Contacto</h2>
-            <div class="card">
-                <p>Email: <a href="mailto:guillemsansa@gmail.com">guillemsansa@gmail.com</a></p>
-                <p>LinkedIn: pronto</p>
-            </div>
-        </div>
-    </section>
+                <div class="field">
+                    <label for="mensaje">Comentario o mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." rows="5"
+                        required></textarea>
+                </div>
 
-    <footer>
-        © 2025 Guillem — Construido con ❤️ y café
+                <button type="submit" class="contact__submit">Enviar</button>
+            </form>
+
+            <p class="contact__alt">
+                O escríbeme a <a href="mailto:guillemsansa@gmail.com">guillemsansa@gmail.com</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer" role="contentinfo">
+        <p>© <span id="year">2025</span> Guillem Sansalvador Vadell</p>
+        <address>
+            <a href="mailto:guillemsansa@gmail.com">guillemsansa@gmail.com</a>
+        </address>
+        <nav aria-label="Legal">
+            <a href="#">Política de privacidad</a>
+            <span aria-hidden="true"> · </span>
+            <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="me noopener">LinkedIn</a>
+        </nav>
     </footer>
+
+    <!-- ===== Accesibilidad menor: actualizar aria-current según sección visible ===== -->
+    <script>
+        // Año dinámico en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Marca el enlace activo en la navegación (aria-current) según el scroll
+        const sections = ['sobre-mi', 'proyectos', 'contacto'].map(id => document.getElementById(id));
+        const navLinks = Array.from(document.querySelectorAll('.header__nav-link'));
+
+        const setActive = (id) => {
+            navLinks.forEach(a => {
+                const isActive = a.getAttribute('href') === '#' + id;
+                a.toggleAttribute('aria-current', isActive ? 'page' : false);
+            });
+        };
+
+        const obs = new IntersectionObserver((entries) => {
+            entries
+                .filter(e => e.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+                .slice(0, 1)
+                .forEach(e => setActive(e.target.id));
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: [0.25, 0.5, 0.75] });
+
+        sections.forEach(s => s && obs.observe(s));
+    </script>
+
+    <!-- ===== Schema.org (JSON-LD) ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Guillem Sansalvador",
+        "jobTitle": "Programador Full Stack (en formación)",
+        "image": "https://github.com/Guillem0707.png",
+        "email": "mailto:guillemsansa@gmail.com",
+        "url": "https://guillem0707.github.io/portfolio/",
+        "sameAs": [
+          "https://github.com/Guillem0707",
+          "https://www.linkedin.com/in/tu-usuario"
+        ],
+        "knowsAbout": ["TypeScript","React","NestJS","HTML","CSS","Accesibilidad","UX"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Portfolio de Guillem Sansalvador",
+        "url": "https://guillem0707.github.io/portfolio/"
+      }
+    ]
+  }
+  </script>
 </body>
 
 </html>
+
+
+<!--<img src="https://github.com/Guillem0707.png" alt="Guillem">-->
+
+<!--
+1. Objetivo del portfolio:
+    - Mostrar quién eres y qué ofreces.
+    - Enseñar proyectos reales (aunque sean personales o de práctica).
+    - Transmitir profesionalismo y tu estilo.
+
+
+
+2. Estructura básica de un portfolio: Un buen portfolio debería tener estas secciones:
+    1. Inicio / Hero
+        - Tu nombre y una frase breve (ej. "Desarrollador Full Stack apasionado por la tecnología y la psicología").
+        
+        - Una foto tuya o ilustración.
+        
+        - Un botón de acción (ej. "Ver proyectos" o "Contáctame").
+
+    2. Sobre mí
+        - Breve presentación: quién eres, qué estudias/estudiaste, motivaciones.
+
+        - Habilidades principales (ej. HTML, CSS, JS, React, NestJS).
+
+    3. Proyectos
+        - Tarjetas con imagen, título, descripción y enlaces:
+            - Demo online (Netlify, Vercel, GitHub Pages).
+            - Código en GitHub.
+
+    4. Experiencia / Estudios (si tienes)
+        - No es obligatorio si estás empezando, pero siempre suma.
+
+    5. Contacto
+        - Email, LinkedIn, GitHub, etc.
+
+        - Formulario de contacto (opcional).
+
+
+
+3. Tecnologías recomendadas
+    Si estás empezando:
+        - HTML + CSS + JS → suficiente para tu primera versión.
+        - GitHub Pages → gratis y fácil para publicar.
+
+    Si ya quieres algo más pro:
+        - React con TypeScript para el frontend (más moderno y escalable).
+        - TailwindCSS para un diseño rápido y atractivo.
+        - Vercel o Netlify para desplegarlo gratis.
+
+
+
+4. Buenas prácticas de diseño
+    - Minimalista, estilo tipo Apple/Notion/Linear (mucho espacio en blanco, tipografías limpias).
+
+    - No recargues con demasiados colores ni animaciones.
+
+    - Asegúrate que sea responsive (se vea bien en móvil y PC).
+
+
+
+5. Ejemplo de estructura de archivos (versión sencilla)
+    /portfolio
+      ├── index.html
+      ├── style.css
+      ├── script.js
+      └── /images
+
+    👉 index.html tendría secciones <header>, <main> y <footer> con tu contenido.
+    👉 style.css define colores, tipografía y grid/flexbox.
+    👉 script.js para animaciones sencillas (menú móvil, efectos, etc.).-->
